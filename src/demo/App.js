@@ -155,6 +155,10 @@ class App extends Component {
     const SEPARATOR = ' · '
 
     return (
+    // https://stackoverflow.com/questions/32577886/is-there-a-way-to-render-multiple-react-components-in-the-react-render-functio
+    <React.Fragment>
+      <h1>Page title</h1>
+
       <div className='app'>
         <section className='section'>
           <h1>ReactPlayer Demo</h1>
@@ -263,7 +267,7 @@ class App extends Component {
               </tr>
               <tr>
                 <th>Played</th>
-                <td><progress max={1} value={played} /></td>
+                <td><progress max={1} value={played} />  <span>{duration * (1 - played)}</span> </td>
               </tr>
               <tr>
                 <th>Loaded</th>
@@ -312,41 +316,8 @@ class App extends Component {
                   {this.renderLoadButton('https://www.twitch.tv/kronovi', 'Test C')}
                 </td>
               </tr>
-              <tr>
-                <th>Streamable</th>
-                <td>
-                  {this.renderLoadButton('https://streamable.com/moo', 'Test A')}
-                  {this.renderLoadButton('https://streamable.com/ifjh', 'Test B')}
-                </td>
-              </tr>
-              <tr>
-                <th>Wistia</th>
-                <td>
-                  {this.renderLoadButton('https://home.wistia.com/medias/e4a27b971d', 'Test A')}
-                  {this.renderLoadButton('https://home.wistia.com/medias/29b0fbf547', 'Test B')}
-                </td>
-              </tr>
-              <tr>
-                <th>DailyMotion</th>
-                <td>
-                  {this.renderLoadButton('https://www.dailymotion.com/video/x5e9eog', 'Test A')}
-                  {this.renderLoadButton('https://www.dailymotion.com/video/x61xx3z', 'Test B')}
-                </td>
-              </tr>
-              <tr>
-                <th>Mixcloud</th>
-                <td>
-                  {this.renderLoadButton('https://www.mixcloud.com/mixcloud/meet-the-curators/', 'Test A')}
-                  {this.renderLoadButton('https://www.mixcloud.com/mixcloud/mixcloud-curates-4-mary-anne-hobbs-in-conversation-with-dan-deacon/', 'Test B')}
-                </td>
-              </tr>
-              <tr>
-                <th>Vidyard</th>
-                <td>
-                  {this.renderLoadButton('https://video.vidyard.com/watch/YBvcF2BEfvKdowmfrRwk57', 'Test A')}
-                  {this.renderLoadButton('https://video.vidyard.com/watch/BLXgYCDGfwU62vdMWybNVJ', 'Test B')}
-                </td>
-              </tr>
+             
+             
               <tr>
                 <th>Files</th>
                 <td>
@@ -355,8 +326,6 @@ class App extends Component {
                   {this.renderLoadButton('http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm', 'webm')}
                   {this.renderLoadButton('https://storage.googleapis.com/media-session/elephants-dream/the-wires.mp3', 'mp3')}
                   {this.renderLoadButton(MULTIPLE_SOURCES, 'Multiple')}
-                  {this.renderLoadButton('https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8', 'HLS (m3u8)')}
-                  {this.renderLoadButton('http://dash.edgesuite.net/envivio/EnvivioDash3/manifest.mpd', 'DASH (mpd)')}
                 </td>
               </tr>
               <tr>
@@ -396,7 +365,7 @@ class App extends Component {
                 <td>{loaded.toFixed(3)}</td>
               </tr>
               <tr>
-                <th>duration</th>
+                <th>duration 222</th>
                 <td><Duration seconds={duration} /></td>
               </tr>
               <tr>
@@ -415,9 +384,12 @@ class App extends Component {
           {SEPARATOR}
           <a href='https://github.com/CookPete/react-player'>GitHub</a>
           {SEPARATOR}
-          <a href='https://www.npmjs.com/package/react-player'>npm</a>
+          <a href='https://www.npmjs.com/package/react-player'>npm 222</a>
         </footer>
       </div>
+      
+    </React.Fragment>
+
     )
   }
 }
