@@ -162,11 +162,12 @@ class App extends Component {
 
     return (
     // https://stackoverflow.com/questions/32577886/is-there-a-way-to-render-multiple-react-components-in-the-react-render-functio
-    // <RTableApp/>
+    //
     <React.Fragment>
       <h1>Page title</h1>
 
       <App2/>
+      <RTableApp/>
       
 
       <div className='app'>
