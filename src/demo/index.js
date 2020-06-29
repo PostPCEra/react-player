@@ -2,6 +2,8 @@ import React from 'react'
 import { render } from 'react-dom'
 import App from './App'
 
+import ReactDOM from 'react-dom'
+
 const container = document.getElementById('app')
 
 render(<App />, container)

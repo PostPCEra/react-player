@@ -12,14 +12,20 @@ import { version } from '../../package.json'
 import ReactPlayer from '../index'
 import Duration from './Duration'
 
-const MULTIPLE_SOURCES = [
+import ReactDOM from 'react-dom'
+import App2 from './App2'
+import RTableApp from './RTableApp'
+
+
+
+const MULTIPLE_SOURCES = [ 
   { src: 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4', type: 'video/mp4' },
   { src: 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv', type: 'video/ogv' },
   { src: 'http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm', type: 'video/webm' }
 ]
 
 class App extends Component {
-  state = {
+  state =  {
     url: null,
     pip: false,
     playing: true,
@@ -156,8 +162,12 @@ class App extends Component {
 
     return (
     // https://stackoverflow.com/questions/32577886/is-there-a-way-to-render-multiple-react-components-in-the-react-render-functio
+    // <RTableApp/>
     <React.Fragment>
       <h1>Page title</h1>
+
+      <App2/>
+      
 
       <div className='app'>
         <section className='section'>
