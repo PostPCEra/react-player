@@ -1,5 +1,9 @@
 #  TODO items list
 
+### debug - 4
+- fresh brand new github repo started by cloning a good working repo: https://github.com/PostPCEra/next-netlify-blog-starter
+- made my own component SRComponet which uses React Hooks , it works ....
+- all chagnes checked into the repo
 
 
 ### debug - 3
